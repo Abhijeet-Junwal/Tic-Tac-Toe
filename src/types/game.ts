@@ -12,7 +12,7 @@ export type PlayerState = {
 };
 
 export type GameState = {
-    board: (String | null)[];
+    board: (Symbol | null)[];
     currentTurn: Symbol;
     players: Record<Symbol, PlayerState>;
     mode: Mode;
