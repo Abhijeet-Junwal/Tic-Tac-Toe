@@ -4,3 +4,42 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+
+
+html, body {
+  height: 100%;
+}
+
+* {
+  transition: background-color 0.2s ease,
+              color 0.2s ease,
+              opacity 0.2s ease,
+              transform 0.2s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0%   { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+.animate-pop {
+  animation: pop 0.2s ease-out;
+}

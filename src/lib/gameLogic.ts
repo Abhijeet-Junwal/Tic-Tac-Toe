@@ -31,7 +31,7 @@ export function applyMove(state: GameState, index: number): GameState {
 
     // Giiker's mode
     if(state.mode === "giiker" && player.moves.length === 3){
-        const oldestMove = player.moves.shift();
+        const oldestMove = newMoves.shift();
         if(oldestMove){
             newBoard[oldestMove.index] = null;
         }
@@ -40,7 +40,7 @@ export function applyMove(state: GameState, index: number): GameState {
     // Place new move
     newBoard[index] = state.currentTurn;
     newMoves.push({ index });
-
+ 
     const newState: GameState = {
         ...state,
         board: newBoard,

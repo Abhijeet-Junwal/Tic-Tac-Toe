@@ -11,7 +11,7 @@ export function OIcon({ dimmed }: { dimmed?: boolean }) {
         cy="50"
         r="40"
         stroke="black"
-        strokeWidth="10"
+        strokeWidth="20"
         fill="none"
       />
     </svg>

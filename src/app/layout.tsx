@@ -17,17 +17,13 @@ export const metadata: Metadata = {
   description: "Play Tic Tac Toe with Normal and Giiker modes",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className="bg-linear-to-br from-slate-900 to-slate-800 text-white">
+        <main className="min-h-screen flex items-center justify-center">
+          {children}
+        </main>
       </body>
     </html>
   );

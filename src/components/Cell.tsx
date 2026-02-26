@@ -14,8 +14,14 @@ export default function Cell({
     return (
         <button
             onClick={onClick}
-            className="w-20 h-20 border flex items-center justify-center"
+            className={`
+                w-24 h-24 rounded-lg bg-[#66707a]
+                hover:bg-[#9fa7af]
+                flex items-center justify-center
+                ${dimmed ? "opacity-30 scale-95" : ""}
+            `}
         >
+
             {value === "X" && <XIcon dimmed={dimmed} /> }
             {value === "O" && <OIcon dimmed={dimmed} /> }
         </button>

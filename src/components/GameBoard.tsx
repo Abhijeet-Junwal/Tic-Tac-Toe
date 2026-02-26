@@ -9,7 +9,7 @@ type Props = {
 
 export default function GameBoard( {board, dimIndex, onMove}: Props ) {
     return (
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-3 p-4">
             {board.map((value, i) => (
                 <Cell
                     key={i}
@@ -20,4 +20,4 @@ export default function GameBoard( {board, dimIndex, onMove}: Props ) {
             ))}
         </div>
     )
-}
+} 
